@@ -1,0 +1,27 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.11.11",
+  "startedAt":  "2025-03-23T14:34:48.640376Z",
+  "program":  "c:\\Luis\\Uni\\master_madrid\\TFM\\cv_def\\trainer.py",
+  "codePath":  "trainer.py",
+  "email":  "luismedrano2000@gmail.com",
+  "root":  "C:\\Luis\\Uni\\master_madrid\\TFM\\cv_def",
+  "host":  "DESKTOP-NT1M5QN",
+  "executable":  "C:\\ProgramData\\anaconda3\\envs\\gnn\\python.exe",
+  "codePathLocal":  "trainer.py",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "1460089647104",
+      "used":  "355705323520"
+    }
+  },
+  "memory":  {
+    "total":  "34072825856"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

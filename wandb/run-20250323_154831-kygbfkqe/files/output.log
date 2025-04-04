@@ -1,0 +1,24 @@
+Epoch [1/20], Training Loss: 1.1756, Validation Loss: 1.0741
+Model checkpoint saved at checkpoints/model_epoch_1.pth
+Epoch [2/20], Training Loss: 0.9586, Validation Loss: 0.8881
+Epoch [3/20], Training Loss: 0.7393, Validation Loss: 0.6934
+Epoch [4/20], Training Loss: 0.5179, Validation Loss: 0.4941
+Epoch [5/20], Training Loss: 0.3397, Validation Loss: 0.3515
+Epoch [6/20], Training Loss: 0.2527, Validation Loss: 0.2888
+Epoch [7/20], Training Loss: 0.2209, Validation Loss: 0.2535
+Epoch [8/20], Training Loss: 0.2006, Validation Loss: 0.2244
+Epoch [9/20], Training Loss: 0.1860, Validation Loss: 0.2091
+Epoch [10/20], Training Loss: 0.1762, Validation Loss: 0.2024
+Epoch [11/20], Training Loss: 0.1666, Validation Loss: 0.1979
+Model checkpoint saved at checkpoints/model_epoch_11.pth
+Epoch [12/20], Training Loss: 0.1599, Validation Loss: 0.1798
+Epoch [13/20], Training Loss: 0.1539, Validation Loss: 0.1653
+Epoch [14/20], Training Loss: 0.1472, Validation Loss: 0.1609
+Epoch [15/20], Training Loss: 0.1411, Validation Loss: 0.1562
+Epoch [16/20], Training Loss: 0.1364, Validation Loss: 0.1488
+Epoch [17/20], Training Loss: 0.1320, Validation Loss: 0.1434
+Epoch [18/20], Training Loss: 0.1285, Validation Loss: 0.1378
+Epoch [19/20], Training Loss: 0.1265, Validation Loss: 0.1530
+Epoch [20/20], Training Loss: 0.1219, Validation Loss: 0.1548
+Model checkpoint saved at checkpoints/model_epoch_20.pth
+Training history saved as training_history.png
