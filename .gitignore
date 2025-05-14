@@ -1,0 +1,8 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore checkpoints and model files
+checkpoints/
+*.pth
