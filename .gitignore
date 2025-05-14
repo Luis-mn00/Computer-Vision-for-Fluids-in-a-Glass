@@ -2,7 +2,3 @@
 __pycache__/
 *.pyc
 *.pyo
-
-# Ignore checkpoints and model files
-checkpoints/
-*.pth

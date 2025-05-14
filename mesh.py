@@ -10,6 +10,7 @@ from scipy.spatial import ConvexHull
 import random
 from scipy.spatial import KDTree, Delaunay
 import os
+from PIL import Image
 
 from models import UNetResNet_low, UNetResNet
 
@@ -227,26 +228,23 @@ def plot_results(input_img, output_mask):
 # Load the trained model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = UNetResNet_low(n_classes=3).to(device)
-model.load_state_dict(torch.load("checkpoints/model_epoch_100.pth", map_location=device), strict=False)
+model.load_state_dict(torch.load("checkpoints/model_epoch_91.pth", map_location=device), strict=False)
 model.eval()
 
-data = torch.load("data/dataset.pt")
+data = torch.load("data/dataset_2.pt")
 test_images, test_masks = data["test"]
 Nx = test_images[0].shape[-2]
 Ny = test_images[0].shape[-1]
-input_tensor = preprocess_image(test_images[6], img_size=(Nx, Ny)).to(device)
+input_tensor = preprocess_image(test_images[0], img_size=(Nx, Ny)).to(device)
 
 # Inference
 start_time = time.time()
 with torch.no_grad():
     output_tensor = model(input_tensor)
 output_mask = postprocess_mask(output_tensor)
-end_time = time.time()
-execution_time = end_time - start_time
-print(f"Total execution time: {execution_time:.4f} seconds")
 
 # plot results
-plot_results(input_tensor[0][0], output_mask)
+#plot_results(input_tensor[0][0], output_mask)
 
 # Extract fluid contours and generate mesh
 fluid_contours = extract_fluid_contours(output_mask)
@@ -257,6 +255,9 @@ diameter_cm = estimate_glass_width_image(radius*2, 40)
 print(f"Diameter of the glass (cm): ", diameter_cm)
 vertices, faces = extract_volume(fluid_contours, R_dict)
 points = create_3d_mesh(vertices, faces, 500, 2)
+end_time = time.time()
+execution_time = end_time - start_time
+print(f"Total execution time: {execution_time:.4f} seconds")
 print(f"Number of points in the second option: ", points.shape)
 plot_3d_mesh(vertices, faces, points)
 
