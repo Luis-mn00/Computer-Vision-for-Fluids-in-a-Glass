@@ -333,14 +333,14 @@ MAIN
 """
 
 videos = videos(img_size=(256, 256))
-videos.extract_frames()
+#videos.extract_frames()
 #videos.create_input_folder(num_frames_per_video=30)
 #videos.create_masks_from_input(index=1)
-videos.create_masks_from_labels()
-videos.resize_dataset(index=2, target_size=(128, 128))
+#videos.create_masks_from_labels()
+#videos.resize_dataset(index=2, target_size=(128, 128))
 
-input_dir = "data/inputs/input_1"
-mask_dir = "data/masks/masks_1"
+input_dir = "data/inputs/input_2_128"
+mask_dir = "data/masks/masks_2_128"
 img_size = (128, 128)
 dataset = ImageMaskDataset(input_dir, mask_dir, img_size)
-dataset.save_dataset(save_path="data/dataset.pt", train_ratio=0.8, val_ratio=0.1, test_ratio=0.1)
+dataset.save_dataset(save_path="data/dataset_2.pt", train_ratio=0.8, val_ratio=0.1, test_ratio=0.1)
