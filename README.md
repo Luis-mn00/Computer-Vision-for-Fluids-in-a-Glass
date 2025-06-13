@@ -1,4 +1,4 @@
-This repository contains part of the code used in my MSc thesis at I3A about GNNs for free surface fluid simulations. It contains code for a computer vision model used to identify the fluid volume inside a glass.
+This repository contains part of the code used at I3A (University of Zaragoza) about GNNs for free surface fluid simulations. It contains code for a computer vision model used to identify the fluid volume inside a glass.
 
 ## Dataset
 
